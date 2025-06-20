@@ -1,0 +1,788 @@
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+/* 전체 배경과 기본 폰트 */
+body {
+  background: #f4f4f2;
+  font-family: 'GmarketSans', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+.layout-wrap {
+  width: 1420px;
+  margin: 0 auto;
+  background: #fff;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+main {
+  width: 100%;
+  min-height: 700px;
+  flex: 1 0 auto;
+  position: relative;
+  padding: 40px 40px 40px 48px;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+footer {
+  width: 100%;
+  height: 280px;
+  background: #e0e0e0;
+  border-radius: 36px 36px 0 0;
+  text-align: center;
+  padding: 32px 0 24px 0;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 2;
+}
+
+/* 헤더 스타일 */
+
+header {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 32px 40px 16px 40px;
+  background: none;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.logo {
+    font-size: 1.7rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: color 0.2s;
+}
+nav a:hover {
+    color: #b71c1c; /* 포인트 컬러 */
+}
+
+/* 메인 비주얼 */
+.main-visual {
+    max-width: 800px;
+    margin: 0 auto 32px auto;
+    padding: 32px 0 0 0;
+    text-align: left;
+    position: relative;
+}
+
+.main-visual h1 {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin-bottom: 16px;
+    letter-spacing: -1px;
+}
+
+.highlight {
+    color: #b71c1c; /* 강렬한 레드 포인트 */
+}
+
+.main-visual .desc {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 24px;
+    line-height: 1.7;
+}
+
+.images1 {
+    margin: 30px 0 0 0;
+    display: flex;
+    gap: 16px;
+}
+.images1 img {
+  width: 600px;
+  height: auto;
+}
+
+/* 신약 정보 카드 영역 */
+.main-card-area {
+  width: 100%;
+  min-height: 700px;
+  background: #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 60px 0 80px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.main-card-bg {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  min-height: 500px;
+  padding: 0;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.main-card-texture {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  opacity: 0.27;
+  z-index: 1;
+  pointer-events: none;
+}
+.main-card-list {
+  width: 100%;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.main-card-row {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  padding: 22px 28px 18px 28px;
+  margin-bottom: 0;
+  border: 1px solid #ededed;
+}
+.main-card-title {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.main-card-photo-area {
+  width: 100%;
+  max-width: 700px;
+  min-height: 120px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  margin-bottom: 24px;
+  pointer-events: none;
+}
+.main-card-photo-area img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  width: 100%;
+  position: absolute;
+  top: 0; left: 0;
+  z-index: 2;
+  opacity: 0.38;
+}
+
+.main-card-desc {
+  font-size: 1.05rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* 신약 종류 */
+
+
+.drug-card-link {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.drug-card-link:visited,
+.drug-card-link:active {
+  color: inherit;
+}
+
+.drug-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  margin: 60px 0 0 0;
+}
+.drug-card {
+  position: relative;
+  width: 360px;
+  height: 360px;
+  border-radius: 20px;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.06);
+  border: 1px solid #e0e0e0;
+  padding: 38px 32px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  cursor: pointer;
+  background: #f8f8f8;
+}
+
+.pouch-bg {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.35;
+  pointer-events: none;
+}
+.drug-title, .drug-desc, .drug-meta, .adc-tag {
+  position: relative;
+  z-index: 2;
+}
+.drug-card img.pouch-bg {
+  width: 100%;
+  display: block;
+  object-fit:fill;
+}
+.drug-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.1;
+}
+.drug-desc {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.drug-meta {
+  font-size: 0.98rem;
+  color: #888;
+}
+.adc-tag {
+  display: inline-block;
+  background: #f2f2f2;
+  font-size: 0.92rem;
+  font-weight: 700;
+  border-radius: 6px;
+  padding: 2px 8px;
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.drug-card:hover .drug-title,
+.drug-card:hover .drug-desc,
+.drug-card:hover .drug-meta,
+.drug-card:hover .adc-tag {
+  color: #b71c1c;
+}
+.drug-card:hover .adc-tag {
+  background: #fff0f0;
+}
+
+.drug-card {
+  aspect-ratio: 1/1;
+  width: 100%;
+  max-width: 360px;
+  min-height: 240px;
+}
+
+@media (max-width: 600px) {
+  .main-card-bg, .drug-card {
+    width: 94vw;
+    min-width: 0;
+    height: auto;
+    padding: 24px 10vw;
+  }
+  .drug-card {
+    height: 320px;
+    padding: 30px 6vw;
+  }
+}
+
+/* 추가 안내 및 설명 영역 */
+.aid-visual {
+    max-width: 800px;
+    margin: 36px auto 0 auto;
+    text-align: left;
+    padding-bottom: 48px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.aid {
+    background: none;
+    border-radius: 0;     
+    padding: 0;           
+    margin-bottom: 10px;
+    text-align: center;   
+}
+
+.aid p {
+    font-size: 0.92rem;    
+    color: #b0b0b0;       
+    font-weight: 400;
+    margin: 0;
+    letter-spacing: 0.01em;
+}
+
+.aid-visual .desc {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.7;
+    margin-top: 14px;
+}
+
+/* 카드 hover/active 효과 */
+.drug-card-link .drug-card {
+  transition: transform 0.18s cubic-bezier(.4,2,.6,1), box-shadow 0.18s;
+}
+.drug-card-link:hover .drug-card,
+.drug-card-link:focus .drug-card {
+  transform: scale(1.03);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.13);
+}
+
+/* ripple 효과 */
+.ripple {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: rgba(183,28,28,0.15);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.7);
+  animation: ripple-anim 0.5s cubic-bezier(.4,2,.6,1);
+  z-index: 10;
+}
+@keyframes ripple-anim {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+  }
+}
+
+/* 헤더 메뉴 underline 효과 */
+nav a.nav-underline {
+  text-decoration: underline wavy #b71c1c 2px;
+  text-underline-offset: 6px;
+  transition: text-decoration 0.2s;
+}
+
+
+
+/*느엉*/
+
+body {
+  background: #f4f4f2;
+  font-family: 'GmarketSans', 'KOHI배움OTF', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  background: none;
+  position: relative;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #222;
+  font-weight: 500;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+  padding: 8px 14px;
+  border-radius: 8px;
+}
+nav a:hover {
+  color: #b71c1c;
+  background: #f7eaea;
+}
+
+main {
+  width: 100%;
+  max-width: 1420px;
+  margin: 0 auto;
+  min-height: 700px;
+  padding: 40px 0 60px 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 탭 버튼 (탭이 없는 페이지에서는 영향 없음) */
+.drug-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+.tab-btn {
+  font-family: 'GmarketSans', Arial, sans-serif;
+  font-size: 1.08rem;
+  font-weight: 700;
+  background: #fff;
+  color: #222;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 16px 16px 0 0;
+  padding: 16px 32px 12px 32px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+}
+.tab-btn.active,
+.tab-btn:focus {
+  color: #b71c1c;
+  background: #f4eaea;
+  border-bottom: 2.5px solid #b71c1c;
+  z-index: 2;
+}
+
+/* 상세 정보 영역 */
+.drug-detail-wrap {
+  background: #fff;
+  border-radius: 0 0 24px 24px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.07);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 40px 40px 40px;
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.drug-detail {
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+  align-items: flex-start;
+  animation: fadeIn 0.5s;
+}
+.drug-detail:not(.active) {
+  display: none;
+}
+/* 개별 상세페이지에서는 .active가 없어도 항상 보이게 */
+.drug-detail:only-child {
+  display: flex;
+}
+
+.drug-detail-img {
+  flex: 0 0 260px;
+  width: 260px;
+  height: 260px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 2px 18px rgba(0,0,0,0.07);
+  background: #fafafa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.drug-detail-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.drug-detail-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.drug-detail-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #b71c1c;
+  margin: 0 0 10px 0;
+}
+.drug-detail-content .desc {
+  font-size: 1.08rem;
+  color: #444;
+  margin-bottom: 6px;
+  line-height: 1.7;
+}
+.drug-detail-content ul {
+  font-size: 1.02rem;
+  color: #333;
+  padding-left: 20px;
+}
+.drug-detail-content li {
+  margin-bottom: 7px;
+  line-height: 1.6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+/* 푸터 */
+footer {
+  background: #e0e0e0;
+  border-radius: 36px 36px 0 0;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  padding: 40px 0 24px 0;
+  margin: 60px auto 0 auto;
+  line-height: 1.7;
+  max-width: 1420px;
+  box-sizing: border-box;
+  position: relative;
+}
+.footer-slogan {
+  font-size: 1.18rem;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 8px;
+}
+.footer-menu-guide {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 14px;
+}
+.footer-purpose {
+  font-size: 0.98rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+.footer-copy {
+  font-size: 0.92rem;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+/* 반응형 */
+@media (max-width: 1000px) {
+  .drug-detail-wrap {
+    padding: 30px 12px 24px 12px;
+    max-width: 98vw;
+  }
+  .drug-detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .drug-detail-img {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 600px) {
+  header, main, footer {
+    max-width: 100vw;
+    padding: 0 2vw;
+  }
+  .drug-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .drug-detail-img {
+    width: 80vw;
+    height: 80vw;
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+
+
+
+/* 푸터 */
+footer {
+  background: #e0e0e0;
+  border-radius: 36px 36px 0 0;
+  text-align: center;
+  color: #888;
+  font-size: 1rem;
+  padding: 40px 0 24px 0;
+  margin: 60px auto 0 auto;
+  line-height: 1.7;
+  max-width: 1420px;
+  box-sizing: border-box;
+  position: relative;
+}
+.footer-slogan {
+  font-size: 1.18rem;
+  font-weight: bold;
+  color: #b71c1c;
+  margin-bottom: 8px;
+}
+.footer-menu-guide {
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 14px;
+}
+.footer-purpose {
+  font-size: 0.98rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+.footer-copy {
+  font-size: 0.92rem;
+  color: #aaa;
+  margin-top: 8px;
+}
+
+/* 반응형 */
+@media (max-width: 1000px) {
+  .drug-detail-wrap {
+    padding: 30px 12px 24px 12px;
+    max-width: 98vw;
+  }
+  .drug-detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .drug-detail-img {
+    margin-bottom: 16px;
+  }
+}
+@media (max-width: 600px) {
+  header, main, footer {
+    max-width: 100vw;
+    padding: 0 2vw;
+  }
+  .drug-tabs {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .drug-detail-img {
+    width: 80vw;
+    height: 80vw;
+    max-width: 320px;
+    max-height: 320px;
+  }
+}
+
+
+
+
+
+/* 푸터 */
+footer {
+    background: #e0e0e0;
+    border-radius: 36px 36px 0 0;
+    text-align: center;
+    color: #888;
+    font-size: 1rem;
+    padding: 40px 0 24px 0;
+    margin: 0 auto;
+    line-height: 1.7;
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    footer {
+        max-width: 98vw;
+        border-radius: 24px 24px 0 0;
+        padding: 24px 0 14px 0;
+    }
+}
+
+.footer-slogan {
+    font-size: 1.18rem;
+    font-weight: bold;
+    color: #b71c1c;
+    margin-bottom: 8px;
+}
+.footer-menu-guide {
+    font-size: 1.05rem;
+    color: #444;
+    margin-bottom: 14px;
+}
+.footer-purpose {
+    font-size: 0.98rem;
+    color: #666;
+    margin-bottom: 18px;
+}
+.footer-copy {
+    font-size: 0.92rem;
+    color: #aaa;
+    margin-top: 8px;
+}
+
+/* 반응형 */
+@media (max-width: 500px) {
+  .main-card-bg, .main-card-list {
+    max-width: 98vw;
+  }
+  .main-card-row {
+    padding: 18px 5vw 14px 5vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-card-area {
+    padding: 18px 0 36px 0;
+  }
+  .main-card-row {
+    padding: 14px 3vw 10px 3vw;
+  }
+}
